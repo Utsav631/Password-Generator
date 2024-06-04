@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    
+
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 61%, rgba(229, 43, 43, 1) 100%);
+
+
+    /* global 92%+ browsers support */
+    /* background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 1) 38%, rgba(229, 43, 43, 1) 100%); */
+
+    /* global 94%+ browsers support */
+    /* background: linear-gradient(90deg, rgba(31, 17, 206, 1) 0%, rgba(229, 43, 43, 1) 100%); */
+
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 450px;
+}
+
+h1{
+    color: white;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.container{
+    position: relative;
+    background-color: #660000;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #E5E4E2;
+    margin: 1rem;
+    padding-top: 0.35rem;
+}
+
+.display-container{
+    background: transparent;
+    color: #E5E4E2;
+    padding: 1.15rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+
+.display-container::placeholder{
+    color: #E5E4E2;
+    position: absolute;
+    left: 1.5rem;
+    /* top: 50%; */
+    font-size: 1.5rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    /* transform: translate(-50%); */
+}
+
+.data-copying1{
+    position: absolute;
+    right: 1rem;
+    top: 40%;
+    transform: translate(-50%);
+    scale: 1.8;
+}
+
+.input-container{
+    background-color: #660000;
+    width: 100%;
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid #E5E4E2;
+    padding: 1.15rem 1rem;
+}
+
+.passlen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.passlen h2:nth-child(1){
+    color: white;
+    font-size: 1.5rem;
+    /* left: 1.5rem; */
+    /* padding: 1.15rem 1rem; */
+    letter-spacing: 0.4px;
+}
+
+.datalenNumber1{
+    color: gold;
+    font-size: 1.5rem;
+    padding: 1.15rem 1rem;
+    scale: 1.5;
+    /* border: 1px solid gold; */
+}
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+    /* margin-right: 1.5rem; */
+}
+
+.strength h2{
+    color: white;
+    font-size: 1.5rem;
+    /* left: 1.5rem; */
+    /* padding: 1.15rem 1rem; */
+    letter-spacing: 0.4px;
+}
+
+.strength-button{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.generatorBtn{
+    background-color: gold;
+    border: transparent;
+    border-bottom: 0.35rem solid white;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    letter-spacing: 1px;
+    color: black;
+    font-weight: 1000;
+    font-size: 1.25rem;
+}
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+/* making the whole checkbox from scratch*/
+.check input{
+    appearance: none; /* default style none kr dia*/
+    border: 1px solid gold;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: relative; /* taaki iske upar jab tick ae to vo overlap kr sake by absolute position*/
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+    background-color: gold;
+}
+
+.check input:checked::before{
+    content: '✔'; /* ye online copy kra tha*/
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5rem;
+    transform: translateX(-50%) translateY(235%);
+}
+
+.check label{
+    color: white;
+    letter-spacing: 0.75px;
+    font-size: 1.25rem;
+}
+
+#check1{
+    margin-top: 1.75rem;
+}
+
+/* building slider from the scratch as weell */
+.slider{
+    appearance: none;
+    position: relative;
+    width: 100%;
+    height: 0.75rem;
+    /* bottom: 50%; */
+    cursor: pointer;
+    background-color: black;
+    border-radius: 1rem;
+    /* margin-bottom: 1rem; */
+    /* margin-top: 2rem; */
+    /* margin-bottom: 1.5rem; */
+    background-image: linear-gradient(black,black);
+    background-repeat: none;
+}
+
+
+/* ye google chore m to chal jaega but mozilla firefox m nhi chalega uske lie .slider::-moz-range-thumb use krna padega */
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: gold;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(225,229,61,0.50);
+}
+
+.slider:focus{
+    outline: 2.5px solid gold;
+    box-shadow: 0px 0px 20px 0px white;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid gold;
+    /* background-color: white; */
+    box-shadow: 0px 0px 20px 0px white;
+}
+
+.data-copying1{
+    background-color: transparent;
+    border: transparent;
+    color: gold;
+}
+
+/* lecture 53 kuch glt hi hora h  */
+/* 
+.tooltip{
+    background-color: black;
+    position: absolute;
+    color: gold;
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding:  5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.active{
+    opacity: 1;
+    transform: scale(1);
+}  */

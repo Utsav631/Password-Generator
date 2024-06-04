@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="heading">
+            <h1>
+                Password Generator
+            </h1>
+        </div>
+
+        <div class="container">
+
+            <input readonly placeholder="Password" class="display-container" data-passwordDisplay>
+
+
+            <button class="data-copying1" data-copying>
+                <span class="tooltip" data-copyMsg>
+                    <i class="fa-regular fa-copy scale-3"></i>
+                </span>
+            </button>
+
+
+        </div>
+
+        <div class="input-container">
+            
+            <div class="passlen">
+
+                <h2>
+                    Password Length
+                </h2>
+
+                <p class="datalenNumber1" datalenNumber>
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="slider">
+                <input type="range" max="10" min="1" value="5" class="slider" step="1" datalenSlider>
+            </div>
+
+            <div class="check" id="check1">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Includes Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">Includes Lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="checkbox3">
+                <label for="checkbox3">Includes Number</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="checkbox4">
+                <label for="checkbox4">Includes Symbol</label>
+            </div>
+
+            
+            <div class="strength">
+                <h2>Strength</h2>
+
+                <div class="strength-button" data-indicator>
+                </div>
+            </div>
+
+            <div class="generator">
+                <button class="generatorBtn" GenerateBtn>Generate Password</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/b6378a6cdf.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
